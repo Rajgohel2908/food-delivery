@@ -1,0 +1,16 @@
+/* login-page */
+
+.container{
+    background: whitesmoke;
+    height: 100vh;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.box{
+    height: 300px;
+    width: 200px;
+    background: rgb(216, 231, 226);
+
+}
