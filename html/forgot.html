@@ -1,0 +1,34 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Login</title>
+    <link rel="stylesheet" href="/css/style.css">
+     <!-- feather icons -->
+    <script src="https://unpkg.com/feather-icons"></script>
+    <!-- js -->
+     <link rel="js" href="/js/forgot-pass.js">
+</head>
+
+<body>
+    <div class="container">
+        <div class="box">
+            <form action="pass.html" method="post">
+                <h1>Reset Password</h1>
+                <div class="input-box">
+                    <input type="email" placeholder="Username" required>
+                    <i data-feather="mail"></i>
+                </div>
+
+                <button type="submit" class="btn" onsubmit="return gotopass()">Reset</button>
+
+            </form>
+        </div>
+    </div>
+</body>
+<script>
+    feather.replace();
+</script>
+</html>

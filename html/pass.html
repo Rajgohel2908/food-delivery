@@ -1,0 +1,38 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Login</title>
+    <link rel="stylesheet" href="/css/style.css">
+     <!-- feather icons -->
+    <script src="https://unpkg.com/feather-icons"></script>
+    <!-- ja -->
+    <link rel="js" href="/js/pass-login.js">
+</head>
+
+<body>
+    <div class="container">
+        <div class="box">
+            <form action="login.html" method="post">
+                <h1>Password</h1>
+
+                <div class="input-box">
+                    <input type="password" placeholder="password" required>
+                </div>
+
+                <div class="input-box">
+                    <input type="password" placeholder=" Confirm password" required>
+                </div>
+
+                <button type="submit" class="btn" onsubmit="return gotopage()">Change</button>
+
+            </form>
+        </div>
+    </div>
+</body>
+<script>
+    feather.replace();
+</script>
+</html>
