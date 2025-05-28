@@ -5,13 +5,14 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Document</title>
+    <!-- css -->
     <link href="/css/style.css" rel="stylesheet">
     <!-- feather icons -->
     <script src="https://unpkg.com/feather-icons"></script>
 </head>
 
 <body>
-    <div>
+    <div class="web-container">
         <!-- side bar -->
         <div class="side-bar">
             <div class="menu-bar">
@@ -21,7 +22,6 @@
                     <li><a href="#"><i data-feather="shopping-cart"></i>Cart</a></li>
                     <li><a href="#"><i data-feather="map"></i>Restaurents</a></li>
                     <li><a href="#"><i data-feather="map-pin"></i>Track</a></li>
-                </ul>
                 </ul>
             </div>
 
@@ -33,10 +33,64 @@
                 </ul>
             </div>
         </div>
+
+        <!-- home-page -->
+        <div class="home-page">
+            <div class="slider">
+                <button class="prev">&#10094;</button>
+
+                <div class="slides">
+                    <img src="/images/atikah-akhtar-DIdQP3HUMXQ-unsplash.jpg" class="slide active">
+                    <img src="/images/lai-yuching-WxePxgrIJbQ-unsplash.jpg" class="slide">
+                    <img src="/images/yoseph-hailu-bhrjN9JUmW4-unsplash.jpg" class="slide">
+                    <img src="/images/zoshua-colah-3qHDm3IQCUs-unsplash.jpg" class="slide">
+                </div>
+
+                <button class="next">&#10095;</button>
+            </div>
+
+            <h1 align="center">Top-dishes</h1>
+            <hr>
+            <div class="top-dishes">
+                <div class="dish">
+                    <div class="dish-img"><img src="/images/zoshua-colah-3qHDm3IQCUs-unsplash.jpg">
+                        <p>Dosa</p>
+                    </div>
+                </div>
+                <div class="dish">
+                    <div class="dish-img"><img src="/images/zoshua-colah-3qHDm3IQCUs-unsplash.jpg"></div>
+                </div>
+                <div class="dish">
+                    <div class="dish-img"><img src="/images/zoshua-colah-3qHDm3IQCUs-unsplash.jpg"></div>
+                </div>
+                <div class="dish">
+                    <div class="dish-img"><img src="/images/zoshua-colah-3qHDm3IQCUs-unsplash.jpg"></div>
+                </div>
+                <div class="dish">
+                    <div class="dish-img"><img src="/images/zoshua-colah-3qHDm3IQCUs-unsplash.jpg"></div>
+                </div>
+                <div class="dish">
+                    <div class="dish-img"><img src="/images/zoshua-colah-3qHDm3IQCUs-unsplash.jpg"></div>
+                </div>
+                <div class="dish">
+                    <div class="dish-img"><img src="/images/zoshua-colah-3qHDm3IQCUs-unsplash.jpg"></div>
+                </div>
+                <div class="dish">
+                    <div class="dish-img"><img src="/images/zoshua-colah-3qHDm3IQCUs-unsplash.jpg"></div>
+                </div>
+                <div class="dish">
+                    <div class="dish-img"><img src="/images/zoshua-colah-3qHDm3IQCUs-unsplash.jpg"></div>
+                </div>
+                <div class="dish">
+                   <div class="dish-img"><img src="/images/zoshua-colah-3qHDm3IQCUs-unsplash.jpg"></div> 
+                </div>
+            </div>
+        </div>
     </div>
 </body>
 <script>
     feather.replace();
 </script>
+<script src="/js/slider.js"></script>
 
 </html>
