@@ -15,13 +15,15 @@
     <div class="web-container">
         <!-- side bar -->
         <div class="side-bar">
+            
             <div class="menu-bar">
+                <img class="logo
+            " src="/images/logo1.webp">
                 <ul type="none" class="menu">
-                    <li><a href="#"><i data-feather="home"></i>Home</a></li>
-                    <li><a href="#"><i data-feather="globe"></i>Browse</a></li>
-                    <li><a href="#"><i data-feather="shopping-cart"></i>Cart</a></li>
+                    <li><a href="index.html"><i data-feather="home"></i>Home</a></li>
+                    <li><a href=""><i data-feather="search"></i>Search</a></li>
+                    <li><a href="cart.html"><i data-feather="shopping-cart"></i>Cart</a></li>
                     <li><a href="#"><i data-feather="map"></i>Restaurents</a></li>
-                    <li><a href="#"><i data-feather="map-pin"></i>Track</a></li>
                 </ul>
             </div>
 
@@ -50,47 +52,159 @@
             </div>
 
             <h1 align="center">Top-dishes</h1>
-            <hr>
             <div class="top-dishes">
-                <div class="dish">
-                    <div class="dish-img"><img src="/images/zoshua-colah-3qHDm3IQCUs-unsplash.jpg">
-                        <p>Dosa</p>
+                <div class="dish" data-id="dosa">
+                    <img src="/images/zoshua-colah-3qHDm3IQCUs-unsplash.jpg" alt="Dosa">
+                    <p class="dish-name">Dosa</p>
+                    <p class="detail">Bhavnagar</p>
+                    <p class="detail-rating">&#9733; 4.7</p>
+
+                    <div class="cart-controls">
+                        <button onclick="changeQty('dosa', -1)">−</button>
+                        <span id="qty-dosa">0</span>
+                        <button onclick="changeQty('dosa', 1)">+</button>
+                        <button class="add-to-cart" onclick="addToCart('dosa', 'Dosa')">Add to Cart</button>
                     </div>
                 </div>
-                <div class="dish">
-                    <div class="dish-img"><img src="/images/zoshua-colah-3qHDm3IQCUs-unsplash.jpg"></div>
+
+                <div class="dish" data-id="idli">
+                    <img src="/images/idli.jpg" alt="idli">
+                    <p class="dish-name">Idli</p>
+                    <p class="detail">Bhavnagar</p>
+                    <p class="detail-rating">&#9733; 4.6</p>
+
+                    <div class="cart-controls">
+                        <button onclick="changeQty('idli', -1)">−</button>
+                        <span id="qty-idli">0</span>
+                        <button onclick="changeQty('idli', 1)">+</button>
+                        <button class="add-to-cart" onclick="addToCart('idli', 'Idli')">Add to Cart</button>
+                    </div>
                 </div>
-                <div class="dish">
-                    <div class="dish-img"><img src="/images/zoshua-colah-3qHDm3IQCUs-unsplash.jpg"></div>
+
+
+
+                <div class="dish" data-id="palak-paneer">
+                    <img src="/images/palak paneer.jpg" alt="palak paneer">
+                    <p class="dish-name">Palak Paneer</p>
+                    <p class="detail">Bhavnagar</p>
+                    <p class="detail-rating">&#9733; 4.8</p>
+
+                    <div class="cart-controls">
+                        <button onclick="changeQty('palak', -1)">−</button>
+                        <span id="qty-palak">0</span>
+                        <button onclick="changeQty('palak', 1)">+</button>
+                        <button class="add-to-cart" onclick="addToCart('palak', 'Palak-Paneer')">Add to Cart</button>
+                    </div>
                 </div>
-                <div class="dish">
-                    <div class="dish-img"><img src="/images/zoshua-colah-3qHDm3IQCUs-unsplash.jpg"></div>
+
+                <div class="dish" data-id="Aloo-sabji">
+                    <img src="/images/aloo sabji.jpg" alt="Aloo sabji">
+                    <p class="dish-name">Aloo Sabji</p>
+                    <p class="detail">Bhavnagar</p>
+                    <p class="detail-rating">&#9733; 4.5</p>
+
+                    <div class="cart-controls">
+                        <button onclick="changeQty('aloo', -1)">−</button>
+                        <span id="qty-aloo">0</span>
+                        <button onclick="changeQty('aloo', 1)">+</button>
+                        <button class="add-to-cart" onclick="addToCart('aloo', 'Aloo-Sabjji')">Add to Cart</button>
+                    </div>
                 </div>
-                <div class="dish">
-                    <div class="dish-img"><img src="/images/zoshua-colah-3qHDm3IQCUs-unsplash.jpg"></div>
+
+                <div class="dish" data-id="aloo-paratha">
+                    <img src="/images/aloo-paratha.jpg" alt="Aloo paratha">
+                    <p class="dish-name">Aloo Paratha</p>
+                    <p class="detail">Bhavnagar</p>
+                    <p class="detail-rating">&#9733; 4.6</p>
+
+                    <div class="cart-controls">
+                        <button onclick="changeQty('alooparatha', -1)">−</button>
+                        <span id="qty-alooparatha">0</span>
+                        <button onclick="changeQty('alooparatha', 1)">+</button>
+                        <button class="add-to-cart" onclick="addToCart('alooparatha', 'Aloo paratha')">Add to
+                            Cart</button>
+                    </div>
                 </div>
-                <div class="dish">
-                    <div class="dish-img"><img src="/images/zoshua-colah-3qHDm3IQCUs-unsplash.jpg"></div>
+
+                <div class="dish" data-id="samosa">
+                    <img src="/images/samosa.jpg" alt="Samosa">
+                    <p class="dish-name">Samosa</p>
+                    <p class="detail">Bhavnagar</p>
+                    <p class="detail-rating">&#9733; 4.5</p>
+
+                    <div class="cart-controls">
+                        <button onclick="changeQty('samosa', -1)">−</button>
+                        <span id="qty-samosa">0</span>
+                        <button onclick="changeQty('samosa', 1)">+</button>
+                        <button class="add-to-cart" onclick="addToCart('samosa', 'Samosa')">Add to Cart</button>
+                    </div>
                 </div>
-                <div class="dish">
-                    <div class="dish-img"><img src="/images/zoshua-colah-3qHDm3IQCUs-unsplash.jpg"></div>
+
+                <div class="dish" data-id="burger">
+                    <img src="/images/burger.jpg" alt="Dosa">
+                    <p class="dish-name">Burger</p>
+                    <p class="detail">Bhavnagar</p>
+                    <p class="detail-rating">&#9733; 4.8</p>
+
+                    <div class="cart-controls">
+                        <button onclick="changeQty('burger', -1)">−</button>
+                        <span id="qty-burger">0</span>
+                        <button onclick="changeQty('burger', 1)">+</button>
+                        <button class="add-to-cart" onclick="addToCart('burger', 'Burger')">Add to Cart</button>
+                    </div>
                 </div>
-                <div class="dish">
-                    <div class="dish-img"><img src="/images/zoshua-colah-3qHDm3IQCUs-unsplash.jpg"></div>
+
+                <div class="dish" data-id="cheese-cake">
+                    <img src="/images/cheese-cake.jpg" alt="Cheese cake">
+                    <p class="dish-name">Cheese Cake</p>
+                    <p class="detail">Bhavnagar</p>
+                    <p class="detail-rating">&#9733; 4.9</p>
+
+                    <div class="cart-controls">
+                        <button onclick="changeQty('cheese-cake', -1)">−</button>
+                        <span id="qty-cheese-cake">0</span>
+                        <button onclick="changeQty('cheese-cake', 1)">+</button>
+                        <button class="add-to-cart" onclick="addToCart('cheese-cake', 'Cheese Cake')">Add to
+                            Cart</button>
+                    </div>
                 </div>
-                <div class="dish">
-                    <div class="dish-img"><img src="/images/zoshua-colah-3qHDm3IQCUs-unsplash.jpg"></div>
+
+                <div class="dish" data-id="pizza">
+                    <img src="/images/pizza.jpg" alt="Dosa">
+                    <p class="dish-name">Pizza</p>
+                    <p class="detail">Bhavnagar</p>
+                    <p class="detail-rating">&#9733; 4.6</p>
+
+                    <div class="cart-controls">
+                        <button onclick="changeQty('pizza', -1)">−</button>
+                        <span id="qty-pizza">0</span>
+                        <button onclick="changeQty('pizza', 1)">+</button>
+                        <button class="add-to-cart" onclick="addToCart('pizza', 'Pizza')">Add to Cart</button>
+                    </div>
                 </div>
-                <div class="dish">
-                   <div class="dish-img"><img src="/images/zoshua-colah-3qHDm3IQCUs-unsplash.jpg"></div> 
+
+                <div class="dish" data-id="sandwich">
+                    <img src="/images/sandwich.jpg" alt="Sandwich">
+                    <p class="dish-name">Sandwich</p>
+                    <p class="detail">Bhavnagar</p>
+                    <p class="detail-rating">&#9733; 4.7</p>
+
+                    <div class="cart-controls">
+                        <button onclick="changeQty('sandwich', -1)">−</button>
+                        <span id="qty-sandwich">0</span>
+                        <button onclick="changeQty('sandwich', 1)">+</button>
+                        <button class="add-to-cart" onclick="addToCart('sandwich', 'Sandwich')">Add to Cart</button>
+                    </div>
                 </div>
             </div>
         </div>
+    </div>
     </div>
 </body>
 <script>
     feather.replace();
 </script>
 <script src="/js/slider.js"></script>
+<script src="/js/cart.js"></script>
 
 </html>
