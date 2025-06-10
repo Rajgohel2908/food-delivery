@@ -1,0 +1,82 @@
+<!-- File: search.html -->
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <title>Dish Search</title>
+  <style>
+
+    header {
+      background-color: #ffffff;
+      padding: 15px 30px;
+      box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+      display: flex;
+      align-items: center;
+      justify-content: space-between;
+    }
+
+
+    .search-bar {
+      flex-grow: 1;
+      margin-left: 30px;
+      display: flex;
+    }
+
+    .search-bar input[type="text"] {
+      width: 100%;
+      padding: 10px;
+      font-size: 16px;
+      border: 1px solid #ccc;
+      border-radius: 5px 0 0 5px;
+      outline: none;
+    }
+
+    .search-bar button {
+      padding: 10px 20px;
+      font-size: 16px;
+      border: none;
+      background-color: #28a745;
+      color: #fff;
+      border-radius: 0 5px 5px 0;
+      cursor: pointer;
+    }
+
+    .search-bar button:hover {
+      background-color: #218838;
+    }
+
+    .results {
+      padding: 30px;
+    }
+  </style>
+</head>
+<body>
+
+  <header>
+    <div class="logo">DishFinder</div>
+    <div class="search-bar">
+      <input type="text" id="searchInput" placeholder="Search for dishes...">
+      <button onclick="searchDish()">Search</button>
+    </div>
+  </header>
+
+  <div class="results" id="results">
+    <!-- Search results will appear here -->
+  </div>
+
+  <script>
+    function searchDish() {
+      const query = document.getElementById('searchInput').value.trim();
+      const resultsDiv = document.getElementById('results');
+
+      if (query === "") {
+        resultsDiv.innerHTML = "<p>Please enter a dish name to search.</p>";
+      } else {
+        resultsDiv.innerHTML = `<p>Showing results for: <strong>${query}</strong></p>`;
+      }
+    }
+  </script>
+
+</body>
+</html>

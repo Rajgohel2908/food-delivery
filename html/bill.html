@@ -1,0 +1,107 @@
+<!DOCTYPE html>
+<html lang="en">
+
+    <head>
+        <meta charset="UTF-8">
+        <title>Order Bill</title>
+        <link rel="stylesheet" href="/css/style.css">
+        <style>
+            .bill-container {
+                max-width: 800px;
+                margin: 50px auto;
+                padding: 20px;
+                border: 2px solid #ccc;
+                border-radius: 12px;
+                background: #f9f9f9;
+            }
+
+            table {
+                width: 100%;
+                border-collapse: collapse;
+                margin-bottom: 1em;
+            }
+
+            th,
+            td {
+                padding: 10px;
+                border: 1px solid #bbb;
+                text-align: center;
+            }
+
+            .center {
+                text-align: center;
+            }
+        </style>
+    </head>
+
+    <body>
+        <div class="web-container">
+            <div class="bill-page">
+                <h1 align="center">Your Bill</h1>
+                <div class="bill-display" id="bill-content"></div>
+            </div>
+        </div>
+
+        <script>
+            const billCart = JSON.parse(localStorage.getItem('billCart')) || [];
+            const billContainer = document.getElementById('bill-details');
+
+            if (billCart.length > 0) {
+                const table = document.createElement('table');
+                table.innerHTML = `
+                    <tr>
+                        <th>Dish</th>
+                        <th>Restaurant</th>
+                        <th>City</th>
+                        <th>Quantity</th>
+                        <th>Price</th>
+                        <th>Total</th>
+                    </tr>
+                `;
+
+                let grandTotal = 0;
+
+                billCart.forEach(item => {
+                    const price = item.price || 100;
+                    const total = price * item.quantity;
+                    grandTotal += total;
+
+                    const row = document.createElement('tr');
+                    row.innerHTML = `
+                        <td>${item.name}</td>
+                        <td>${item.res_name || 'N/A'}</td>
+                        <td>${item.city || 'N/A'}</td>
+                        <td>${item.quantity}</td>
+                        <td>₹${price}</td>
+                        <td>₹${total}</td>
+                    `;
+                    table.appendChild(row);
+                });
+
+                const totalRow = document.createElement('tr');
+                totalRow.innerHTML = `
+                    <td colspan="5" style="text-align:right;"><strong>Grand Total</strong></td>
+                    <td><strong>₹${grandTotal}</strong></td>
+                `;
+                table.appendChild(totalRow);
+
+                billContainer.appendChild(table);
+            } else {
+                billContainer.innerHTML = '<p class="center">No items found in bill.</p>';
+            }
+
+            function confirmOrder() {
+                alert('Order Placed Successfully!');
+                localStorage.removeItem('cart');
+                localStorage.removeItem('billCart');
+                window.location.href = 'index.html'; // or wherever you want to send user
+            }
+        </script>
+
+        <script src="https://cdnjs.cloudflare.com/ajax/libs/jspdf/2.5.1/jspdf.umd.min.js"></script>
+        <script src="https://cdnjs.cloudflare.com/ajax/libs/jspdf-autotable/3.5.28/jspdf.plugin.autotable.min.js"></script>
+        <script src="/js/bill.js"></script>
+        <script src="/js/cart.js"></script>
+        <script>feather.replace();</script>
+    </body>
+</html>

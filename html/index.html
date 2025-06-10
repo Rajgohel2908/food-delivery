@@ -4,7 +4,7 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Document</title>
+    <title>Delishdrop</title>
     <!-- css -->
     <link href="/css/style.css" rel="stylesheet">
     <!-- feather icons -->
@@ -15,23 +15,24 @@
     <div class="web-container">
         <!-- side bar -->
         <div class="side-bar">
-            
+
             <div class="menu-bar">
                 <img class="logo
             " src="/images/logo1.webp">
                 <ul type="none" class="menu">
                     <li><a href="index.html"><i data-feather="home"></i>Home</a></li>
-                    <li><a href=""><i data-feather="search"></i>Search</a></li>
+                    <li><a href="search.html"><i data-feather="search"></i>Search</a></li>
                     <li><a href="cart.html"><i data-feather="shopping-cart"></i>Cart</a></li>
-                    <li><a href="#"><i data-feather="map"></i>Restaurents</a></li>
+                    <li><a href="restaurent.html"><i data-feather="map"></i>Restaurents</a></li>
                 </ul>
             </div>
 
             <div class="profile">
                 <ul type="none">
-                    <li><a href="#"><i data-feather="user"></i>Profile</a></li>
-                    <li><a href="#"><i data-feather="help-circle"></i>Support</a></li>
-                    <li><a href="#"><i data-feather="info"></i>About us</a></li>
+                    <li><a href="profile.html"><i data-feather="user"></i>Profile</a></li>
+                    <li><a href="support.html"><i data-feather="help-circle"></i>Support</a></li>
+                    <li><a href="about-us.html
+                        "><i data-feather="info"></i>About us</a></li>
                 </ul>
             </div>
         </div>
@@ -52,10 +53,13 @@
             </div>
 
             <h1 align="center">Top-dishes</h1>
+            <hr>
             <div class="top-dishes">
                 <div class="dish" data-id="dosa">
                     <img src="/images/zoshua-colah-3qHDm3IQCUs-unsplash.jpg" alt="Dosa">
                     <p class="dish-name">Dosa</p>
+                    <p class="detail-price">100</p>
+                    <p class="detail-place">Malhar</p>
                     <p class="detail">Bhavnagar</p>
                     <p class="detail-rating">&#9733; 4.7</p>
 
@@ -63,13 +67,15 @@
                         <button onclick="changeQty('dosa', -1)">−</button>
                         <span id="qty-dosa">0</span>
                         <button onclick="changeQty('dosa', 1)">+</button>
-                        <button class="add-to-cart" onclick="addToCart('dosa', 'Dosa')">Add to Cart</button>
+                        <button class="add-to-cart" onclick="addToCart('dosa', 'Dosa', 'Malhar', 'Bhavnagar', '100')">Add to
+                            Cart</button>
                     </div>
                 </div>
 
                 <div class="dish" data-id="idli">
                     <img src="/images/idli.jpg" alt="idli">
                     <p class="dish-name">Idli</p>
+                    <p class="detail-place">Malhar</p>
                     <p class="detail">Bhavnagar</p>
                     <p class="detail-rating">&#9733; 4.6</p>
 
@@ -77,7 +83,8 @@
                         <button onclick="changeQty('idli', -1)">−</button>
                         <span id="qty-idli">0</span>
                         <button onclick="changeQty('idli', 1)">+</button>
-                        <button class="add-to-cart" onclick="addToCart('idli', 'Idli')">Add to Cart</button>
+                        <button class="add-to-cart" onclick="addToCart('idli', 'Idli','Malhar','Bhavnagar','25')">Add to
+                            Cart</button>
                     </div>
                 </div>
 
@@ -86,6 +93,7 @@
                 <div class="dish" data-id="palak-paneer">
                     <img src="/images/palak paneer.jpg" alt="palak paneer">
                     <p class="dish-name">Palak Paneer</p>
+                    <p class="detail-place">Gwalia</p>
                     <p class="detail">Bhavnagar</p>
                     <p class="detail-rating">&#9733; 4.8</p>
 
@@ -93,13 +101,15 @@
                         <button onclick="changeQty('palak', -1)">−</button>
                         <span id="qty-palak">0</span>
                         <button onclick="changeQty('palak', 1)">+</button>
-                        <button class="add-to-cart" onclick="addToCart('palak', 'Palak-Paneer')">Add to Cart</button>
+                        <button class="add-to-cart"
+                            onclick="addToCart('palak', 'Palak-Paneer','Gwalia','Bhavnagar','250')">Add to Cart</button>
                     </div>
                 </div>
 
                 <div class="dish" data-id="Aloo-sabji">
                     <img src="/images/aloo sabji.jpg" alt="Aloo sabji">
                     <p class="dish-name">Aloo Sabji</p>
+                    <p class="detail-place">Om Sai</p>
                     <p class="detail">Bhavnagar</p>
                     <p class="detail-rating">&#9733; 4.5</p>
 
@@ -107,13 +117,15 @@
                         <button onclick="changeQty('aloo', -1)">−</button>
                         <span id="qty-aloo">0</span>
                         <button onclick="changeQty('aloo', 1)">+</button>
-                        <button class="add-to-cart" onclick="addToCart('aloo', 'Aloo-Sabjji')">Add to Cart</button>
+                        <button class="add-to-cart" onclick="addToCart('aloo', 'Aloo-Sabjji','Om Sai','Bhavnagar','150')">Add
+                            to Cart</button>
                     </div>
                 </div>
 
                 <div class="dish" data-id="aloo-paratha">
                     <img src="/images/aloo-paratha.jpg" alt="Aloo paratha">
                     <p class="dish-name">Aloo Paratha</p>
+                    <p class="detail-place">Sunny Da Dhaba</p>
                     <p class="detail">Bhavnagar</p>
                     <p class="detail-rating">&#9733; 4.6</p>
 
@@ -121,7 +133,8 @@
                         <button onclick="changeQty('alooparatha', -1)">−</button>
                         <span id="qty-alooparatha">0</span>
                         <button onclick="changeQty('alooparatha', 1)">+</button>
-                        <button class="add-to-cart" onclick="addToCart('alooparatha', 'Aloo paratha')">Add to
+                        <button class="add-to-cart"
+                            onclick="addToCart('alooparatha', 'Aloo paratha','Sunny Da Dhaba','Bhavnagar','60')">Add to
                             Cart</button>
                     </div>
                 </div>
@@ -129,6 +142,7 @@
                 <div class="dish" data-id="samosa">
                     <img src="/images/samosa.jpg" alt="Samosa">
                     <p class="dish-name">Samosa</p>
+                    <p class="detail-place">Momai Farshan</p>
                     <p class="detail">Bhavnagar</p>
                     <p class="detail-rating">&#9733; 4.5</p>
 
@@ -136,13 +150,15 @@
                         <button onclick="changeQty('samosa', -1)">−</button>
                         <span id="qty-samosa">0</span>
                         <button onclick="changeQty('samosa', 1)">+</button>
-                        <button class="add-to-cart" onclick="addToCart('samosa', 'Samosa')">Add to Cart</button>
+                        <button class="add-to-cart"
+                            onclick="addToCart('samosa', 'Samosa','Momai Farshan','Bhavnagar','25')">Add to Cart</button>
                     </div>
                 </div>
 
                 <div class="dish" data-id="burger">
                     <img src="/images/burger.jpg" alt="Dosa">
                     <p class="dish-name">Burger</p>
+                    <p class="detail-place">Burger Singh</p>
                     <p class="detail">Bhavnagar</p>
                     <p class="detail-rating">&#9733; 4.8</p>
 
@@ -150,13 +166,15 @@
                         <button onclick="changeQty('burger', -1)">−</button>
                         <span id="qty-burger">0</span>
                         <button onclick="changeQty('burger', 1)">+</button>
-                        <button class="add-to-cart" onclick="addToCart('burger', 'Burger')">Add to Cart</button>
+                        <button class="add-to-cart"
+                            onclick="addToCart('burger', 'Burger','Burger Singh','Bhavnagar','95')">Add to Cart</button>
                     </div>
                 </div>
 
                 <div class="dish" data-id="cheese-cake">
                     <img src="/images/cheese-cake.jpg" alt="Cheese cake">
                     <p class="dish-name">Cheese Cake</p>
+                    <p class="detail-place">Shreeji</p>
                     <p class="detail">Bhavnagar</p>
                     <p class="detail-rating">&#9733; 4.9</p>
 
@@ -164,7 +182,8 @@
                         <button onclick="changeQty('cheese-cake', -1)">−</button>
                         <span id="qty-cheese-cake">0</span>
                         <button onclick="changeQty('cheese-cake', 1)">+</button>
-                        <button class="add-to-cart" onclick="addToCart('cheese-cake', 'Cheese Cake')">Add to
+                        <button class="add-to-cart"
+                            onclick="addToCart('cheese-cake', 'Cheese Cake','Shreeji','Bhavnagar','150')">Add to
                             Cart</button>
                     </div>
                 </div>
@@ -172,6 +191,7 @@
                 <div class="dish" data-id="pizza">
                     <img src="/images/pizza.jpg" alt="Dosa">
                     <p class="dish-name">Pizza</p>
+                    <p class="detail-place">Octane</p>
                     <p class="detail">Bhavnagar</p>
                     <p class="detail-rating">&#9733; 4.6</p>
 
@@ -179,13 +199,15 @@
                         <button onclick="changeQty('pizza', -1)">−</button>
                         <span id="qty-pizza">0</span>
                         <button onclick="changeQty('pizza', 1)">+</button>
-                        <button class="add-to-cart" onclick="addToCart('pizza', 'Pizza')">Add to Cart</button>
+                        <button class="add-to-cart" onclick="addToCart('pizza', 'Pizza','Octane','Bhavnagar','250')">Add to
+                            Cart</button>
                     </div>
                 </div>
 
                 <div class="dish" data-id="sandwich">
                     <img src="/images/sandwich.jpg" alt="Sandwich">
                     <p class="dish-name">Sandwich</p>
+                    <p class="detail-place">Karnavati</p>
                     <p class="detail">Bhavnagar</p>
                     <p class="detail-rating">&#9733; 4.7</p>
 
@@ -193,13 +215,18 @@
                         <button onclick="changeQty('sandwich', -1)">−</button>
                         <span id="qty-sandwich">0</span>
                         <button onclick="changeQty('sandwich', 1)">+</button>
-                        <button class="add-to-cart" onclick="addToCart('sandwich', 'Sandwich')">Add to Cart</button>
+                        <button class="add-to-cart"
+                            onclick="addToCart('sandwich', 'Sandwich','Karnavati','Bhavnagar','120')">Add to Cart</button>
                     </div>
                 </div>
             </div>
         </div>
     </div>
-    </div>
+
+    <footer>
+        &copy; 2025 DelishDrop. All rights reserved.
+    </footer>
+
 </body>
 <script>
     feather.replace();
